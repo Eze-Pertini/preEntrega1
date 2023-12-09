@@ -1,1 +1,11 @@
-[{"title":"Notebook Asus","description":"Asus 500 GB 16GB RAM i7","code":1100,"stock":3,"thumbnail":"./iphone-13.jpg","price":2000,"id":1},{"title":"Iphone 13","description":"Ultimo modelos","code":3600,"stock":5,"thumbnail":"./asus.jpg","price":1000,"id":2},{"title":"Notebook Toshiba","description":"1TB 16GB RAM i7","code":1333,"stock":2,"thumbnail":"./toshiba.jpg","price":2500,"id":3},{"title":"Samsung S23","description":"La mejor camara del mercado","code":6222,"stock":5,"thumbnail":"./S23-01.jpg","price":1300,"id":4}]
+[
+  {
+    "title": "Notebook Asus",
+    "description": "Asus 500 GB 16GB RAM i7",
+    "code": 1180,
+    "stock": 3,
+    "thumbnail": "./iphone-13.jpg",
+    "price": 2000,
+    "id": 1
+  }
+]

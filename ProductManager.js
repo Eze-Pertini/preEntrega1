@@ -3,6 +3,7 @@ const fs = require('fs');
 class ProductManager {
     constructor(path){
         this.path = path;
+        this.products = [];
     }
 
     async getId(){
@@ -21,6 +22,12 @@ class ProductManager {
         
         ProductManager.id++;
         const products = await this.getProducts();
+
+        //VALIDACION DEL CODIGO
+        if (products.some(p => p.code === product.code)) {
+            return console.error(`Ya existe un producto con el código: ${product.code}`);
+        }
+
         const id = await this.getId();
         const newProduct = {
             title: product.title,
@@ -107,23 +114,35 @@ const test = async () => {
     //     thumbnail: './toshiba.jpg',
     //     price: 2500,
     // });
-     await productManager.addProduct({
-          title: 'Samsung S23',
-          description: 'La mejor camara del mercado',
-          code: 6222,
-          stock: 5,
-          thumbnail: './S23-01.jpg',
-          price: 1300,
-      });
+    //  await productManager.addProduct({
+    //       title: 'Samsung S23',
+    //       description: 'La mejor camara del mercado',
+    //       code: 6222,
+    //       stock: 5,
+    //       thumbnail: './S23-01.jpg',
+    //       price: 1300,
+    //   });
 
-    const product2 = await productManager.getProductById(2);
-    console.log(product2);
+    //const product2 = await productManager.getProductById(3);
+    //console.log(product2);
 
     // await productManager.updateProduct(4, {
     //     title: 'Samsung s22'
     // });
 
     // await productManager.deleteProduct(4);
+
+
+
+      await productManager.addProduct({
+        title: 'Notebook Asus',
+        description: 'Asus 500 GB 16GB RAM i7',
+        code: 1180,
+        stock: 3,
+        thumbnail: './iphone-13.jpg',
+        price: 2000,
+    });
+
 }
 
 test();
