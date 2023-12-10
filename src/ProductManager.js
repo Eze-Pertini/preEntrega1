@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 class ProductManager {
     constructor(path){
@@ -90,38 +90,38 @@ class ProductManager {
 
 const test = async () => {
     const productManager = new ProductManager('./products.json');
-    // await productManager.addProduct({
-    //     title: 'Notebook Asus',
-    //     description: 'Asus 500 GB 16GB RAM i7',
-    //     code: 1100,
-    //     stock: 3,
-    //     thumbnail: './iphone-13.jpg',
-    //     price: 2000,
-    // });
-    // await productManager.addProduct({
-    //     title: 'Iphone 13',
-    //     description: 'Ultimo modelos',
-    //     code: 3600,
-    //     stock: 5,
-    //     thumbnail: './asus.jpg',
-    //     price: 1000,
-    // });
-    // await productManager.addProduct({
-    //     title: 'Notebook Toshiba',
-    //     description: '1TB 16GB RAM i7',
-    //     code: 1333,
-    //     stock: 2,
-    //     thumbnail: './toshiba.jpg',
-    //     price: 2500,
-    // });
     //  await productManager.addProduct({
-    //       title: 'Samsung S23',
-    //       description: 'La mejor camara del mercado',
-    //       code: 6222,
-    //       stock: 5,
-    //       thumbnail: './S23-01.jpg',
-    //       price: 1300,
-    //   });
+    //      title: 'Notebook Asus',
+    //      description: 'Asus 500 GB 16GB RAM i7',
+    //      code: 1100,
+    //      stock: 3,
+    //      thumbnail: './iphone-13.jpg',
+    //      price: 2000,
+    //  });
+      await productManager.addProduct({
+          title: 'Iphone 14',
+          description: 'Top of the tops',
+          code: 4604,
+          stock: 2,
+          thumbnail: './iphone-14.jpg',
+          price: 1500,
+      });
+      await productManager.addProduct({
+          title: 'Notebook Asus Tuf',
+          description: '2TB 16GB RAM i5',
+          code: 3112,
+          stock: 4,
+          thumbnail: './asus-tuf-01.jpg',
+          price: 900,
+      });
+       await productManager.addProduct({
+            title: 'Samsung A54',
+            description: 'Telefono standar',
+            code: 3131,
+            stock: 10,
+            thumbnail: './A54-01.jpg',
+            price: 350,
+        });
 
     //const product2 = await productManager.getProductById(3);
     //console.log(product2);
@@ -130,19 +130,10 @@ const test = async () => {
     //     title: 'Samsung s22'
     // });
 
-    // await productManager.deleteProduct(4);
-
-
-
-      await productManager.addProduct({
-        title: 'Notebook Asus',
-        description: 'Asus 500 GB 16GB RAM i7',
-        code: 1180,
-        stock: 3,
-        thumbnail: './iphone-13.jpg',
-        price: 2000,
-    });
+    //await productManager.deleteProduct(1);
 
 }
 
-test();
+//test();
+
+export default ProductManager;
